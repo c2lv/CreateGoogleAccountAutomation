@@ -20,6 +20,7 @@ lastName = ""
 firstName = ""
 Username = ""
 Passwd = ""
+phoneNumber = ""
 
 # find_element_by_name(), find_element_by_id(): 해당하는 element에 커서를 올린다.
 # send_keys(): 커서가 위치한 곳에 해당 값을 입력한다.
@@ -41,7 +42,7 @@ ConfirmPasswd_box.send_keys(Keys.RETURN)
 element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'phoneNumberId')))
 
 phoneNumberId = driver.find_element_by_id("phoneNumberId")
-phoneNumberId.send_keys("") # 미리 변수 할당하면 안 돼서 직접 입력했음.
+phoneNumberId.send_keys(phoneNumber)
 phoneNumberId.send_keys(Keys.RETURN)
 
 # Google 인증 코드는 직접 입력하고 Enter 입력 후 현재 창에서 다음 파일 실행하면 되는데 방법을 몰라서 일단 여기까지.
